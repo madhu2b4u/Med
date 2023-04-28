@@ -14,4 +14,4 @@ data class AssociatedDrug(
     val name: String,
     @Expose @SerializedName("strength")
     val strength: String
-):Parcelable
+) : Parcelable

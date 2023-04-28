@@ -23,6 +23,7 @@ class HomeRemoteModule {
             remoteDataSourceImpl: HomeRemoteDataSourceImpl
         ): HomeRemoteDataSource
     }
+
     @Provides
     fun providesHomeService(retrofit: Retrofit): HomeService =
         retrofit.create(HomeService::class.java)

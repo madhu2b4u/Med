@@ -10,4 +10,4 @@ import kotlinx.android.parcel.Parcelize
 data class DrugsResponse(
     @Expose @SerializedName("problems")
     val problems: List<Problem>
-): Parcelable
+) : Parcelable

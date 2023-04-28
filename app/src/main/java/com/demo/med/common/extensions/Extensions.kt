@@ -85,6 +85,7 @@ val Fragment.isNetworkConnected: Boolean
                     else -> false
                 }
             }
+
             else -> {
                 // Use depreciated methods only on older devices
                 val nwInfo = connectivityManager.activeNetworkInfo ?: return false
@@ -108,6 +109,7 @@ val Activity.isConnected: Boolean
                     else -> false
                 }
             }
+
             else -> {
                 // Use depreciated methods only on older devices
                 val nwInfo = connectivityManager.activeNetworkInfo ?: return false

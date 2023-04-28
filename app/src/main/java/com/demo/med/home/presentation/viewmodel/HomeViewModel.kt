@@ -10,6 +10,7 @@ import com.demo.med.common.SingleLiveEvent
 import com.demo.med.common.Status
 import com.demo.med.common.support.AppCoroutineDispatcherProvider
 import com.demo.med.common.support.AppCoroutineDispatchers
+import com.demo.med.database.entites.HealthData
 import com.demo.med.home.domain.HomeUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -62,10 +63,3 @@ class HomeViewModel @Inject constructor(
         _data.value = data
     }
 }
-
-data class HealthData(
-    val problemName: String,
-    val medicationName: String?,
-    val medicationDose: String?,
-    val medicationStrength: String?,
-)

@@ -1,7 +1,6 @@
 package com.demo.med.database.source
 
-import com.demo.med.home.presentation.viewmodel.HealthData
-
+import com.demo.med.database.entites.HealthData
 
 interface LocalDataSource {
     suspend fun geHealthData(): MutableList<HealthData>?

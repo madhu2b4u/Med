@@ -1,7 +1,7 @@
 package com.demo.med.database.mapper
 
 import com.demo.med.database.entites.DbHealthData
-import com.demo.med.home.presentation.viewmodel.HealthData
+import com.demo.med.database.entites.HealthData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import javax.inject.Inject

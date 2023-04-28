@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.demo.med.R
-import com.demo.med.home.presentation.viewmodel.HealthData
+import com.demo.med.database.entites.HealthData
 import kotlinx.android.synthetic.main.list_item_problems.view.tvMedicationDose
 import kotlinx.android.synthetic.main.list_item_problems.view.tvMedicationName
 import kotlinx.android.synthetic.main.list_item_problems.view.tvProblemName

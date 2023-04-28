@@ -1,9 +1,9 @@
 package com.demo.med.database.source
 
 import com.demo.med.database.dao.HealthDao
+import com.demo.med.database.entites.HealthData
 import com.demo.med.database.mapper.HealthDataMapper
 import com.demo.med.di.qualifiers.IO
-import com.demo.med.home.presentation.viewmodel.HealthData
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext

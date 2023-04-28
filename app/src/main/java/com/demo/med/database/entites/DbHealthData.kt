@@ -8,3 +8,11 @@ data class DbHealthData(
     @PrimaryKey val id: Int,
     val news: String
 )
+
+
+data class HealthData(
+    val problemName: String,
+    val medicationName: String?,
+    val medicationDose: String?,
+    val medicationStrength: String?,
+)

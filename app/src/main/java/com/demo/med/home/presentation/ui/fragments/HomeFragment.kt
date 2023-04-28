@@ -1,6 +1,5 @@
 package com.demo.med.home.presentation.ui.fragments
 
-
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
@@ -9,8 +8,8 @@ import com.demo.med.common.BaseFragment
 import com.demo.med.common.extensions.noCrash
 import com.demo.med.common.support.hide
 import com.demo.med.common.support.show
+import com.demo.med.database.entites.HealthData
 import com.demo.med.home.presentation.ui.adapter.ProblemsAdapter
-import com.demo.med.home.presentation.viewmodel.HealthData
 import com.demo.med.home.presentation.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.rvDrugs

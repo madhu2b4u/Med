@@ -3,11 +3,11 @@ package com.demo.med.home.data.repository
 
 import androidx.lifecycle.liveData
 import com.demo.med.common.Result
+import com.demo.med.database.entites.HealthData
 import com.demo.med.database.source.LocalDataSource
 import com.demo.med.home.data.models.AssociatedDrug
 import com.demo.med.home.data.models.DrugsResponse
 import com.demo.med.home.data.remote.source.HomeRemoteDataSource
-import com.demo.med.home.presentation.viewmodel.HealthData
 import javax.inject.Inject
 
 

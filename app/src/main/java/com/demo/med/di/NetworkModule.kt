@@ -1,7 +1,6 @@
 package com.demo.med.di
 
 import com.demo.med.BuildConfig
-import com.demo.med.common.SpUtil
 import com.demo.med.di.qualifiers.IO
 import com.demo.med.di.qualifiers.MainThread
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory

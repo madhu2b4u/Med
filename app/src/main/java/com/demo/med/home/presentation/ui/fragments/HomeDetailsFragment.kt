@@ -3,14 +3,11 @@ package com.demo.med.home.presentation.ui.fragments
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import com.demo.med.R
 import com.demo.med.common.BaseFragment
 import com.demo.med.common.HEALTH
 import com.demo.med.common.extensions.noCrash
 import com.demo.med.database.entites.HealthData
-import com.demo.med.home.presentation.viewmodel.HomeViewModel
 import kotlinx.android.synthetic.main.fragment_home_details.toolbar
 import kotlinx.android.synthetic.main.list_item_problems.tvMedicationDose
 import kotlinx.android.synthetic.main.list_item_problems.tvMedicationName

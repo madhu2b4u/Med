@@ -17,4 +17,4 @@ data class HealthData(
     val medicationName: String?,
     val medicationDose: String?,
     val medicationStrength: String?,
-):Parcelable
+) : Parcelable

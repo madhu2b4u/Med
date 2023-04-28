@@ -42,7 +42,8 @@ class HomeFragment : BaseFragment() {
             }
 
             tvDate.text = getTodayDate()
-            tvUserName.text = userName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
+            tvUserName.text =
+                userName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
 
             observeOnViewModel()
         }
@@ -68,7 +69,7 @@ class HomeFragment : BaseFragment() {
     private fun contentView(problems: MutableList<HealthData>) {
         dataLayout.show()
         loader.hide()
-        sharedPrefsHelpers?.putBoolean(PRESCRIPTION_LOADED,true)
+        sharedPrefsHelpers?.putBoolean(PRESCRIPTION_LOADED, true)
         adapter.updateList(problems)
         rvDrugs.adapter = adapter
         adapter.onClickListener { healthData, i ->

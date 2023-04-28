@@ -12,4 +12,4 @@ data class ClassName(
     val associatedDrug: List<AssociatedDrug>,
     @Expose @SerializedName("associatedDrug#2")
     val associatedDrug2: List<AssociatedDrug>
-): Parcelable
+) : Parcelable

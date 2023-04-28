@@ -12,4 +12,4 @@ data class Diabete(
     val labs: List<Lab>,
     @Expose @SerializedName("medications")
     val medications: List<Medication>
-): Parcelable
+) : Parcelable

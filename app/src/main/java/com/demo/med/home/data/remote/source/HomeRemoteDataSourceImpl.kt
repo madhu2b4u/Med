@@ -1,7 +1,6 @@
 package com.demo.med.home.data.remote.source
 
 import com.demo.med.di.qualifiers.IO
-import com.demo.med.home.data.models.DrugsResponse
 import com.demo.med.home.data.remote.services.HomeService
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
@@ -13,7 +12,7 @@ class HomeRemoteDataSourceImpl @Inject constructor(
     @IO private val context: CoroutineContext
 ) : HomeRemoteDataSource {
 
-    override suspend fun drugsRequest()= withContext(context) {
+    override suspend fun drugsRequest() = withContext(context) {
         val response = service.requestDrugsAsync().await()
         if (response.isSuccessful)
             response.body() ?: throw Exception("no list")

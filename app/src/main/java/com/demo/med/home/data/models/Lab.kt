@@ -10,4 +10,4 @@ import kotlinx.android.parcel.Parcelize
 data class Lab(
     @Expose @SerializedName("missing_field")
     val missingField: String
-): Parcelable
+) : Parcelable

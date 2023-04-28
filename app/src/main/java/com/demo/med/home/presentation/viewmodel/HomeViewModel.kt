@@ -12,5 +12,4 @@ class HomeViewModel @Inject constructor(
 ) : BaseViewModel(), LifecycleObserver {
 
 
-
 }

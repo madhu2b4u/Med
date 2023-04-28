@@ -12,4 +12,4 @@ data class MedicationsClasse(
     val className: List<ClassName>,
     @Expose @SerializedName("className2")
     val className2: List<ClassName>
-): Parcelable
+) : Parcelable

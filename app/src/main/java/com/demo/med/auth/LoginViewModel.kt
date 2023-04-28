@@ -8,7 +8,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class LoginViewModel @Inject constructor(): BaseViewModel(), LifecycleObserver  {
+class LoginViewModel @Inject constructor() : BaseViewModel(), LifecycleObserver {
 
     private val _loginSuccess = MutableLiveData<String>()
     val loginSuccess: LiveData<String>

@@ -12,4 +12,4 @@ data class Problem(
     val asthma: List<Asthma>,
     @Expose @SerializedName("Diabetes")
     val diabetes: List<Diabete>
-): Parcelable
+) : Parcelable

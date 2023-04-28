@@ -17,6 +17,6 @@ class HomeRemoteDataSourceImpl @Inject constructor(
         if (response.isSuccessful)
             response.body() ?: throw Exception("no list")
         else
-            throw Exception("invalid request with code + response.code()")
+            throw Exception("no drugs")
     }
 }

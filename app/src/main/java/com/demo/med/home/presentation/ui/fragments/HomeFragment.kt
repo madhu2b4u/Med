@@ -57,6 +57,10 @@ class HomeFragment : BaseFragment() {
             contentView(it)
         }
 
+        healthData.observe(viewLifecycleOwner) {
+
+        }
+
         showLoader.observe(viewLifecycleOwner) {
             loaderView()
         }

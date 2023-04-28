@@ -7,6 +7,7 @@ import com.demo.med.R
 import com.demo.med.common.BaseActivity
 import com.demo.med.common.LOGGEDIN
 import com.demo.med.common.USERNAME
+import com.demo.med.common.extensions.hideKeyboard
 import com.demo.med.common.extensions.shortToast
 import com.demo.med.home.presentation.ui.activity.HomeActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -30,6 +31,7 @@ class LoginActivity : BaseActivity() {
     private fun handleLogin() {
 
         loginButton.setOnClickListener {
+            hideKeyboard()
             // Validate inputs
             if (isInputValid()) {
                 // Call login() function on the ViewModel

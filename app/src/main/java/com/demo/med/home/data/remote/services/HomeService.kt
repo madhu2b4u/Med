@@ -8,6 +8,6 @@ import retrofit2.http.GET
 interface HomeService {
 
     // id to fetch from the mock apis
-    @GET("6f75cb9-25d2-48cd-8ef0-298ba6691e96")
+    @GET("36f75cb9-25d2-48cd-8ef0-298ba6691e96")
     fun requestDrugsAsync(): Deferred<Response<DrugsResponse>>
 }

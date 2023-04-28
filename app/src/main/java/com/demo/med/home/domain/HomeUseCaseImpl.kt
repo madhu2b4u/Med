@@ -7,5 +7,5 @@ import javax.inject.Singleton
 @Singleton
 class HomeUseCaseImpl @Inject constructor(private val mHomeRepository: HomeRepository) :
     HomeUseCase {
-    override suspend fun drugsRequest() = mHomeRepository.drugsRequest()
+    override suspend fun drugsRequest(isLoaded: Boolean) = mHomeRepository.drugsRequest(isLoaded)
 }

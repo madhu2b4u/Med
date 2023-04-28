@@ -8,9 +8,9 @@ import com.demo.med.R
 import com.demo.med.common.BaseFragment
 import com.demo.med.common.HEALTH
 import com.demo.med.common.PRESCRIPTION_LOADED
+import com.demo.med.common.extensions.hide
 import com.demo.med.common.extensions.noCrash
-import com.demo.med.common.support.hide
-import com.demo.med.common.support.show
+import com.demo.med.common.extensions.show
 import com.demo.med.database.entites.HealthData
 import com.demo.med.home.presentation.ui.adapter.ProblemsAdapter
 import com.demo.med.home.presentation.viewmodel.HomeViewModel

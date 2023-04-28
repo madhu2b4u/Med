@@ -15,4 +15,6 @@
     <string name="username">Username</string>
     <string name="login">Login</string>
     <string name="password_hint">Password</string>
+    <string name="medication">Medication</string>
+    <string name="medication_details">Medication Details</string>
 </resources>

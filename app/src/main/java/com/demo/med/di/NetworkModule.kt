@@ -21,9 +21,6 @@ import kotlin.coroutines.CoroutineContext
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
-
-    private val sharedPrefUtil = SpUtil.instance!!
-
     @Singleton
     @Provides
     fun provideHttpClient(): OkHttpClient {

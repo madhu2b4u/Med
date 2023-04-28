@@ -10,7 +10,6 @@ import com.demo.med.home.data.models.DrugsResponse
 import com.demo.med.home.data.remote.source.HomeRemoteDataSource
 import javax.inject.Inject
 
-
 class HomeRepositoryImpl @Inject constructor(
     private val remoteDataSource: HomeRemoteDataSource,
     private val localDataSource: LocalDataSource
@@ -40,7 +39,6 @@ class HomeRepositoryImpl @Inject constructor(
         data.problems.forEach { problem ->
             problem.diabetes.forEach { diabetes ->
                 val problemName = diabetes.javaClass.simpleName
-
                 diabetes.medications.forEach { medication ->
                     medication.medicationsClasses.forEach { medicationClass ->
                         medicationClass.className.forEach { associatedDrug ->

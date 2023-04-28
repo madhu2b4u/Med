@@ -3,6 +3,7 @@ package com.demo.med.home.presentation.viewmodel
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.demo.med.common.BaseViewModel
 import com.demo.med.common.Result
@@ -28,14 +29,15 @@ class HomeViewModel @Inject constructor(
     val showLoader: LiveData<Unit> get() = _showLoader
     private val _showLoader = SingleLiveEvent<Unit>()
 
+    val healthData = MutableLiveData<HealthData>()
+    fun sendHealthData(health: HealthData) {
+        healthData.value = health
+    }
+
 
     private val dispatcher: AppCoroutineDispatchers = AppCoroutineDispatcherProvider.dispatcher()
 
-    init {
-        getProblemsList(true)
-    }
-
-    private fun getProblemsList(isLoaded: Boolean) {
+    fun getProblemsList(isLoaded: Boolean) {
         viewModelScope.launch {
             withContext(dispatcher.main()) {
                 _data.addSource(mHomeUseCase.drugsRequest(isLoaded)) {

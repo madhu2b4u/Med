@@ -29,6 +29,11 @@ abstract class BaseFragment : Fragment() {
         return dateFormat.format(calendar.time)
     }
 
+    fun getTime(): String {
+        val currentTime = Calendar.getInstance().time
+        val timeFormat = SimpleDateFormat("h:mm a", Locale.getDefault())
+       return  timeFormat.format(currentTime)
+    }
     override fun onStart() {
         super.onStart()
     }

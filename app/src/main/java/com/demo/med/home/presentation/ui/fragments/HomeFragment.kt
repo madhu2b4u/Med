@@ -18,6 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.dataLayout
 import kotlinx.android.synthetic.main.fragment_home.rvDrugs
 import kotlinx.android.synthetic.main.fragment_home.tvDate
+import kotlinx.android.synthetic.main.fragment_home.tvTime
 import kotlinx.android.synthetic.main.fragment_home.tvUserName
 import kotlinx.android.synthetic.main.layout_loader.loader
 import java.util.Locale
@@ -42,8 +43,8 @@ class HomeFragment : BaseFragment() {
             }
 
             tvDate.text = getTodayDate()
-            tvUserName.text =
-                userName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
+            tvTime.text = getTime()
+            tvUserName.text = getString(R.string.hello_user, userName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() })
 
             observeOnViewModel()
         }

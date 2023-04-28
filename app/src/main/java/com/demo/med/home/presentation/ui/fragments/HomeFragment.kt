@@ -44,7 +44,9 @@ class HomeFragment : BaseFragment() {
 
             tvDate.text = getTodayDate()
             tvTime.text = getTime()
-            tvUserName.text = getString(R.string.hello_user, userName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() })
+            tvUserName.text = getString(
+                R.string.hello_user,
+                userName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() })
 
             observeOnViewModel()
         }

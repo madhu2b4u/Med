@@ -3,7 +3,6 @@ package com.demo.med.home.presentation.viewmodel
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.demo.med.common.BaseViewModel
 import com.demo.med.common.Event

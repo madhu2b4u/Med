@@ -12,8 +12,8 @@ import java.util.Locale
 abstract class BaseFragment : Fragment() {
 
     abstract fun layoutId(): Int
-    val sharedPrefsHelpers = SpUtil.instance
 
+    val sharedPrefsHelpers = SpUtil.instance
     val userName = sharedPrefsHelpers?.getString(USERNAME)
 
     override fun onCreateView(
@@ -35,7 +35,4 @@ abstract class BaseFragment : Fragment() {
         return timeFormat.format(currentTime)
     }
 
-    override fun onStart() {
-        super.onStart()
-    }
 }

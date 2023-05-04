@@ -16,8 +16,6 @@ internal class ProblemsAdapter :
 
     private var list = mutableListOf<HealthData>()
 
-    private var problem: String = ""
-
     private var detailsFunction: ((post: HealthData, pos: Int) -> Unit)? = null
 
     fun onClickListener(detailsFunction: (HealthData, Int) -> Unit) {
@@ -26,10 +24,8 @@ internal class ProblemsAdapter :
 
     fun updateList(list: MutableList<HealthData>) {
         this.list = list
-        this.problem = problem
         notifyDataSetChanged()
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookingsViewHolder {
         val view = LayoutInflater.from(parent.context)

@@ -53,7 +53,7 @@ class HomeViewModelTest {
         viewModel.getProblemsList(false)
         val result = viewModel.healthData
         result.observeForever { }
-        kotlinx.coroutines.delay(2000)
+        delay(2000)
         assert(LiveDataTestUtil.getValue(result).peekContent().status == Status.LOADING)
     }
 
@@ -71,7 +71,7 @@ class HomeViewModelTest {
 
         val result = viewModel.healthData
         result.observeForever {}
-        kotlinx.coroutines.delay(2000)
+        delay(2000)
         assert(
             LiveDataTestUtil.getValue(result).peekContent().status == Status.SUCCESS &&
                     LiveDataTestUtil.getValue(result).peekContent().data == data

@@ -18,4 +18,8 @@
     <string name="medication">Medication</string>
     <string name="medication_details">Medication Details</string>
     <string name="hello_user">Hello, %s</string>
+    <string name="title_activity_hairka">HairkaActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

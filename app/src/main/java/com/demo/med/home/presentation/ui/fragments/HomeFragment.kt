@@ -37,19 +37,22 @@ class HomeFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         noCrash {
-            val isPrescriptionLoaded = sharedPrefsHelpers?.getBoolean(PRESCRIPTION_LOADED, false)
-            if (isPrescriptionLoaded != null) {
-                viewModel.getProblemsList(isPrescriptionLoaded)
-            }
-
-            tvDate.text = getTodayDate()
-            tvTime.text = getTime()
-            tvUserName.text = getString(
-                R.string.hello_user,
-                userName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() })
-
+            setViews()
             observeOnViewModel()
         }
+    }
+
+    private fun setViews() {
+        val isPrescriptionLoaded = sharedPrefsHelpers?.getBoolean(PRESCRIPTION_LOADED, false)
+        if (isPrescriptionLoaded != null) {
+            viewModel.getProblemsList(isPrescriptionLoaded)
+        }
+
+        tvDate.text = getTodayDate()
+        tvTime.text = getTime()
+        tvUserName.text = getString(
+            R.string.hello_user,
+            userName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() })
     }
 
     private fun observeOnViewModel() = with(viewModel) {
@@ -60,7 +63,7 @@ class HomeFragment : BaseFragment() {
         }
 
         healthData.observe(viewLifecycleOwner) {
-
+            // do nothing
         }
 
         showLoader.observe(viewLifecycleOwner) {
@@ -68,11 +71,13 @@ class HomeFragment : BaseFragment() {
         }
     }
 
+    //shows loader view
     private fun loaderView() {
         dataLayout.hide()
         loader.show()
     }
 
+    //show content
     private fun contentView(problems: MutableList<HealthData>) {
         dataLayout.show()
         loader.hide()
@@ -84,6 +89,7 @@ class HomeFragment : BaseFragment() {
         }
     }
 
+    //navigate to health details
     private fun navigateToDetails(healthData: HealthData) {
         val bundle = Bundle()
         bundle.putParcelable(HEALTH, healthData)
